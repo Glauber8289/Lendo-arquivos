@@ -11,7 +11,7 @@ import entities.Product;
 
 public class Program {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		
@@ -28,6 +28,20 @@ public class Program {
 		
 		String targetFileStr = sourceFolderStr + "\\out\\summary.csv";
 		
-		System.out.println("Ctd");
+		try (BufferedReader br = new BufferedReader(new FileReader(sourceFileStr))) {
+
+			String itemCsv = br.readLine();
+			while (itemCsv != null) {
+
+				String[] fields = itemCsv.split(",");
+				String name = fields[0];
+				double price = Double.parseDouble(fields[1]);
+				int valorTotal = Integer.parseInt(fields[2]);
+
+				list.add(new Product(name, price, valorTotal));
+
+				itemCsv = br.readLine();
+			}
 	}   
+}
 }

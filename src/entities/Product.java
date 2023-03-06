@@ -4,8 +4,8 @@ public class Product {
    
 	private String nome;
 	private Double precoUnitario;
-	private Double valorTotal;
-	public Product(String nome, Double precoUnitario, Double valorTotal) {
+	private int valorTotal;
+	public Product(String nome, Double precoUnitario, int valorTotal) {
 		super();
 		this.nome = nome;
 		this.precoUnitario = precoUnitario;
