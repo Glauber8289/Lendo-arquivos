@@ -23,13 +23,15 @@ public class Product {
 	public void setPrecoUnitario(Double precoUnitario) {
 		this.precoUnitario = precoUnitario;
 	}
-	public Double getValorTotal() {
+	public int getValorTotal() {
 		return valorTotal;
 	}
-	public void setValorTotal(Double valorTotal) {
+	public void setValorTotal(int valorTotal) {
 		this.valorTotal = valorTotal;
 	}
 	
-    
+    public Double Total () {
+    	return valorTotal*precoUnitario;
+    }
 	
 }
