@@ -59,6 +59,7 @@ public class Program {
 
 		} catch (IOException e) {
 			System.out.println("Error reading file: " + e.getMessage());
+			System.out.println("CTD");
 		}
 
 		sc.close();
